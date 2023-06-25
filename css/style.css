@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Infant&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+:root {
+  --main-bg-color: #2074f0;
+  --font-family: "Ysabeau Infant", sans-serif;
+  --category-font: "Roboto Mono", monospace;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: whitesmoke;
+}
+
+.footer {
+  background-color: var(--main-bg-color);
+  color: white;
+  height: 8vh;
+}
+
+header {
+  background-color: var(--main-bg-color);
+  color: white;
+}
+
+nav {
+  height: 56px;
+}
+nav ul li {
+  list-style: none;
+  padding: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(213, 211, 211);
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+footer {
+  margin-top: 10px;
+}
+
+.logo {
+  padding-left: 3vw;
+}
+
+.container {
+  /* below cal() states that total 100 vh height - footer height - navbar heigth so it will create a complete perfect viewport without scrollbar */
+  min-height: calc(100vh - 8vh - 56px);
+}
+
+.search-products-container {
+  padding: 0 12px;
+}
+.search-products-input {
+  padding: 10px 12px;
+  width: 25vw;
+}
+
+.login-button a {
+  padding: 5px 40px;
+  font-family: var(--font-family);
+  font-size: medium;
+  color: var(--main-bg-color);
+  font-weight: 600;
+  background-color: white;
+}
+
+.login-button a:hover {
+  background-color: whitesmoke;
+}
+
+.slider img {
+  width: 95vw;
+  margin: 10px 0px;
+}
+
+.products-card {
+  background-color: white;
+  padding: 10px;
+  width: 93vw;
+  margin: 12px auto;
+  border-radius: 3px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.products .product img {
+  border-radius: 3px;
+}
+
+.product .price-range {
+  font-size: large;
+  text-align: center;
+}
+
+.product .grab-now {
+  text-align: center;
+  font-weight: 600;
+}
+
+.product .grab-now a {
+  color: rgb(1, 210, 1);
+}
+.products-heading p {
+  font-size: 50px;
+  text-align: center;
+  inline-size: 250px;
+}
+
+.products-heading a {
+  padding: 8px 16px;
+  background-color: var(--main-bg-color);
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.categories {
+  padding: 20px;
+  width: 95vw;
+  margin: 10px auto;
+  /* margin: 10px 20px; */
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.category:hover {
+  color: var(--main-bg-color);
+}
+
+.category img {
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+}
+.category .category-name {
+  font-family: var(--category-font);
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1250px) {
+  .products-card .products {
+    flex-wrap: wrap;
+  }
+
+  .products-card .products .products-heading a {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .categories {
+    flex-wrap: wrap;
+  }
+  .categories .category {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  header nav {
+    height: 20vh;
+    flex-wrap: wrap;
+  }
+
+  .login-button {
+    margin-top: 8px;
+  }
+
+  .categories {
+    margin: 5px;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header nav {
+    flex-direction: column;
+  }
+
+  header nav .nav-items {
+    flex-direction: column;
+  }
+
+  .products-card .products{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* @media screen and (max-width: 400px) {
+  .products-card {
+    width: 50vw;
+  }
+} */
+
+@media screen {
+  
+}
